@@ -1,8 +1,8 @@
-export const About = () => {
+export const Cafe = () => {
     return (
         <>
             <div className={"background"}>
-                <h1>Über uns</h1>
+                <h1>Café</h1>
             </div>
         </>
     );

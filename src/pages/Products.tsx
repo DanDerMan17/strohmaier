@@ -1,7 +1,19 @@
+import logo_vulkanland from "../assets/res/logo_vulkanland.png";
+
 export const Products = () => {
     return (
         <>
-            <h1>Products</h1>
+            <div className={"background"}>
+                <div className="logo_vulcan">
+                    <img src={logo_vulkanland} height={125}/>
+                </div>
+
+
+                <h1>Produkte</h1>
+
+            </div>
+
+
         </>
     );
 };

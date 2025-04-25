@@ -1,26 +1,82 @@
 /* BASE */
+
+.background {
+    background-image: url('assets/res/background_wheat_pattern.png');
+    background-repeat: repeat;
+    background-size: 750px 750px; /* Fixe Größe */
+    background-color: white;
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.9;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', "Courier New";
     line-height: 1.6;
 }
 
-h1, h2, h3, .logo {
-    font-family: 'Playfair Display', serif;
+/* top-bar */
+#top-bar-wrap {
+    background-color: white;
+    color: white;
+    font-size: 14px;
 }
+
+#top-bar {
+    padding: 5px 20px;
+}
+
+#top-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar-content {
+    font-weight: bold;
+    color: black;
+}
+
+#top-bar-social {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
 
 /* Logo container */
 .logo-container {
     position: relative;
     margin-bottom: 25px;
+    flex: 0 0 auto;
+    padding-left: 25px;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.2);
 }
 
 /* Vulkanland logo on the left */
 .logo_vulcan {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 35%;
     transform: translateY(-50%);
-    padding-left: 20px; /* optional spacing */
+    padding-left: 20px;
+    z-index: 1;
 }
 
 /* Top logo centered */
@@ -31,13 +87,15 @@ h1, h2, h3, .logo {
     height: 100%;
 }
 
-
 /* NAVBAR */
 .navbar {
+    display: flex;
+    align-items: center;
+    background-color: white;
     padding: 0.5rem 1rem;
-    background-color: whitesmoke;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 .navbar-content {
@@ -53,11 +111,12 @@ h1, h2, h3, .logo {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: 70px; /* kleiner, damit Höhe passt */
+    height: 70px;
 }
 
 /* Links */
 .navbar-links {
+    flex: 1;
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -66,7 +125,6 @@ h1, h2, h3, .logo {
     margin: 0;
     padding: 0;
 }
-
 .navbar-links li {
     margin: 0 1rem;
     position: relative;
@@ -94,17 +152,74 @@ h1, h2, h3, .logo {
     width: 100%;
 }
 
-/* HOME */
-.home-background {
-    background-image: url('assets/res/background_wheat_pattern.png');
+
+/* Footer */
+.footer {
+    position: relative;
+    background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.001)),
+            url("assets/res/background_wheat_pattern.png");
     background-repeat: repeat;
-    background-size: auto;
-    background-color: white;
-    min-height: 100vh;
-    padding: 2rem;
+    background-size: 750px 750px;
+    color: #f2f2f2; /* Brighter color for contrast */
+    padding: 3rem 2rem;
+    z-index: 1;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+.footer-content {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: #febc26;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.footer-social {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-social a {
+    color: black;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.footer-social a:hover {
+    color: #febc26;
+    transform: scale(1.2);
+}
+
+#footer-links {
+    color: black;
+    font-weight: lighter;
+}
+
+#footer-links:hover {
+    font-weight: bold;
+}
+
+/* oeffnungszeiten */
+.opening-hours {
+    text-align: center;
 }
 
 
