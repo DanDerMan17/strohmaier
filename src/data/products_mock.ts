@@ -1,5 +1,5 @@
 import {IProduct} from "../models/IProduct.ts";
-import bread from "../assets/images/bread.jpg";
+import bread from "../assets/product_images/bread.jpg";
 
 export const products_mock: IProduct[] = [
     {
