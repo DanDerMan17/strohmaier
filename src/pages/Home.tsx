@@ -1,7 +1,8 @@
 export const Home = () => {
     return (
-        <>
-            <h1>Home</h1>
-        </>
+        <div className="home-background">
+
+            <h1>Willkommen bei der Bäckerei Strohmaier</h1>
+        </div>
     );
 };
