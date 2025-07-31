@@ -7,9 +7,9 @@ export const Products = () => {
                 <div className="logo_vulcan">
                     <img src={logo_vulkanland} height={125}/>
                 </div>
+                <h1>PRODUKTE</h1>
 
 
-                <h1>Produkte</h1>
 
             </div>
 
