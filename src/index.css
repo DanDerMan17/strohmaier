@@ -1,15 +1,23 @@
-/* BASE */
+/* ----------------------- */
+/* 🌐 Global Base Styles   */
+/* ----------------------- */
 
+:root {
+    --breakpoint-mobile: 768px;
+    --breakpoint-tablet: 1024px;
+    --breakpoint-desktop: 1280px;
+}
+
+/* BASE */
 .background {
     background-image: url('assets/res/background_wheat_pattern.png');
     background-repeat: repeat;
-    background-size: 750px 750px; /* Fixe Größe */
+    background-size: 750px 750px;
     background-color: white;
     padding: 3rem 2rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    /*height: 100vh;*/
     opacity: 0.9;
 }
 
@@ -18,7 +26,10 @@ body {
     line-height: 1.6;
 }
 
-/* top-bar */
+/* ----------------------- */
+/* 🎛️ Top Bar             */
+/* ----------------------- */
+
 #top-bar-wrap {
     background-color: white;
     color: white;
@@ -56,8 +67,10 @@ body {
     transform: scale(1.2);
 }
 
+/* ----------------------- */
+/* 🧱 Logo & Navbar        */
+/* ----------------------- */
 
-/* Logo container */
 .logo-container {
     position: relative;
     margin-bottom: 25px;
@@ -70,7 +83,6 @@ body {
     transform: scale(1.2);
 }
 
-/* Vulkanland logo on the left */
 .logo_vulcan {
     position: absolute;
     left: 0;
@@ -80,7 +92,6 @@ body {
     z-index: 1;
 }
 
-/* Top logo centered */
 .logo_top {
     display: flex;
     justify-content: center;
@@ -88,7 +99,6 @@ body {
     height: 100%;
 }
 
-/* NAVBAR */
 .navbar {
     display: flex;
     align-items: center;
@@ -99,27 +109,6 @@ body {
     z-index: 10;
 }
 
-.navbar-links li a.active::after {
-    width: 100%;
-}
-
-.navbar-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-/* Bäcker-Logo */
-#baecker_logo {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 70px;
-}
-
-/* Links */
 .navbar-links {
     flex: 1;
     list-style-type: none;
@@ -130,6 +119,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .navbar-links li {
     margin: 0 1rem;
     position: relative;
@@ -153,16 +143,27 @@ body {
     transition: width 0.3s ease;
 }
 
-.navbar-links li a:hover::after {
+.navbar-links li a:hover::after,
+.navbar-links li a.active::after {
     width: 100%;
 }
 
-/* Footer */
+#baecker_logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70px;
+}
+
+/* ----------------------- */
+/* 📄 Footer               */
+/* ----------------------- */
+
 .footer {
     position: relative;
-    background-image:
-            linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.001)),
-            url("assets/res/background_wheat_pattern.png");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.001)),
+    url("assets/res/background_wheat_pattern.png");
     background-repeat: repeat;
     background-size: 750px 750px;
     padding: 3rem 2rem;
@@ -220,17 +221,22 @@ body {
     font-weight: bold;
 }
 
-/* oeffnungszeiten */
+/* ----------------------- */
+/* 🧩 Utility + Home       */
+/* ----------------------- */
+
 .centerDiv {
     text-align: center;
 }
 
-/* HOME */
 .usp {
     font-size: 20px;
 }
 
-/* ProductCard Styles */
+/* ----------------------- */
+/* 📦 Product Card         */
+/* ----------------------- */
+
 .product-card {
     border: 1px solid #e0e0e0;
     border-radius: 12px;
@@ -283,7 +289,10 @@ body {
     opacity: 1;
 }
 
-/* Modal */
+/* ----------------------- */
+/* 🖼️ Modal                */
+/* ----------------------- */
+
 .modal {
     position: fixed;
     top: 0;
@@ -319,6 +328,7 @@ body {
     border: none;
     border-radius: 50%;
     width: 32px;
+    width: 32px;
     height: 32px;
     cursor: pointer;
     font-weight: bold;
@@ -327,22 +337,34 @@ body {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-
-
-
-
 /* ----------------------- */
-/* 📱 Responsive: Mobile */
+/* 📱 Responsive: Mobile   */
 /* ----------------------- */
-@media (max-width: 768px) {
 
-    /* Grund-Layout */
-    .background {
-        padding: 2rem 1rem;
-        background-size: 500px 500px;
+@media (max-width: var(--breakpoint-mobile)) {
+
+    html, body {
+        max-width: 90%;
+        overflow-x: hidden;
     }
 
-    /* Top-Bar */
+    h1 {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        text-align: center;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+
+    .background {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .home-slider {
+        height: 240px !important;
+        object-fit: cover;
+    }
+
     #top-bar-inner {
         flex-direction: column;
         gap: 0.5rem;
@@ -353,20 +375,26 @@ body {
         font-size: 14px;
     }
 
-    /* Navbar */
     .navbar {
         flex-direction: column;
         padding: 1rem;
+        align-items: flex-start;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .navbar-links {
         flex-direction: column;
-        gap: 0.5rem;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0.75rem;
         font-size: 18px;
     }
 
     .navbar-links li {
-        margin: 0.5rem 0;
+        width: 100%;
+        margin: 0;
+        text-align: left;
     }
 
     #baecker_logo {
@@ -376,16 +404,26 @@ body {
         margin-bottom: 1rem;
     }
 
-    /* Footer */
     .footer {
-        padding: 2rem 1rem;
-        background-size: 500px 500px;
+        background-image:
+                linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 100%),
+                url("assets/res/background_wheat_pattern.png");
+        background-size: 750px 750px;
+        background-repeat: repeat;
+        background-position: center;
+        background-color: white;
+        padding: 3rem 2rem;
+        min-height: 300px;
+        color: black;
+        font-weight: lighter;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        box-sizing: border-box;
     }
 
     .footer-content {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        gap: 1.5rem;
     }
 
     .footer-section {
@@ -405,29 +443,68 @@ body {
         font-size: 20px;
     }
 
-    /* Bilder in Cards */
+    .product-card {
+        max-width: 90%;
+        padding: 12px;
+    }
+
     .product-card img {
-        height: 160px;
+        height: 140px;
     }
 
-    /* USP Text */
+    .product-overlay {
+        font-size: 0.9rem;
+    }
+
     .usp {
-        font-size: 18px;
+        font-size: 16px;
+        padding: 0 0.5rem;
     }
 
-    /* Impressum / Datenschutz Pages */
     .legal-page {
         padding: 1.5rem 1rem;
         font-size: 16px;
         line-height: 1.5;
     }
 
-    /* Location Text oder Öffnungszeiten */
     .centerDiv {
         padding: 1rem;
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .modal-content {
+        padding: 0 1rem;
+    }
+
+    .modal-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .modal-close-button {
+        top: 8px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
     }
 }
 
 
+/* ----------------------- */
+/* 🧻 Responsive: Tablet   */
+/* ----------------------- */
 
+@media (max-width: var(--breakpoint-tablet)) {
+    .product-card {
+        max-width: 100%;
+    }
+
+    .footer-content {
+        gap: 1.5rem;
+    }
+
+    .usp {
+        font-size: 19px;
+    }
+}

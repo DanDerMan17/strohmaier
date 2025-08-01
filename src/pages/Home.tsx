@@ -45,7 +45,7 @@ export const Home = () => {
                     margin: '20px auto',
                 }}
             >
-                <img
+                <img className={"home-slider"}
                     src={images[currentIndex]}
                     alt={`Slide ${currentIndex}`}
                     style={{
