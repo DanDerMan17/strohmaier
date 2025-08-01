@@ -230,4 +230,204 @@ body {
     font-size: 20px;
 }
 
+/* ProductCard Styles */
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 16px;
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-image-container {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product-overlay:hover {
+    opacity: 1;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+    z-index: 9999;
+    padding: 48px 0;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90vw;
+    margin: 0 auto;
+    padding-bottom: 16px;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 32px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+/* ----------------------- */
+/* 📱 Responsive: Mobile */
+/* ----------------------- */
+@media (max-width: 768px) {
+
+    /* Grund-Layout */
+    .background {
+        padding: 2rem 1rem;
+        background-size: 500px 500px;
+    }
+
+    /* Top-Bar */
+    #top-bar-inner {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .topbar-content {
+        font-size: 14px;
+    }
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 18px;
+    }
+
+    .navbar-links li {
+        margin: 0.5rem 0;
+    }
+
+    #baecker_logo {
+        position: static;
+        transform: none;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 1rem;
+        background-size: 500px 500px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .footer-logo {
+        width: 120px;
+    }
+
+    .footer-social {
+        margin-top: 1.5rem;
+    }
+
+    .footer-social a {
+        font-size: 20px;
+    }
+
+    /* Bilder in Cards */
+    .product-card img {
+        height: 160px;
+    }
+
+    /* USP Text */
+    .usp {
+        font-size: 18px;
+    }
+
+    /* Impressum / Datenschutz Pages */
+    .legal-page {
+        padding: 1.5rem 1rem;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Location Text oder Öffnungszeiten */
+    .centerDiv {
+        padding: 1rem;
+        font-size: 18px;
+    }
+}
+
+
 

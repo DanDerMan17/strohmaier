@@ -9,6 +9,9 @@ import {OpeningHours} from "./pages/OpeningHours.tsx";
 import facebook_logo from "./assets/icons/facebook-icon.png";
 import instagram_logo from "./assets/icons/instagram-icon.png";
 import {Footer} from "./components/Footer.tsx";
+import { Impressum } from "./pages/Impressum.tsx";
+import { Datenschutz } from "./pages/Datenschutz.tsx";
+
 
 function App() {
 
@@ -19,7 +22,7 @@ function App() {
                 <div id="top-bar">
                     <div id="top-bar-inner">
 
-                        <span className="topbar-content">baeckerei@strohmaierkg.at | 03357 42290</span>
+                        <span className="topbar-content">baeckerei@strohmaierkg.at | 03116 8283</span>
 
                         <div id="top-bar-social">
                             <a href="https://www.facebook.com/kurt.strohmaier.144" target="_blank" rel="noopener noreferrer">
@@ -43,6 +46,9 @@ function App() {
                 <Route path="/cafe" element={<Cafe/>}/>
                 <Route path="/location" element={<Location/>}/>
                 <Route path="/offnungszeiten" element={<OpeningHours/>}/>
+
+                <Route path="/impressum" element={<Impressum />} />
+                <Route path="/datenschutz" element={<Datenschutz />} />
 
             </Routes>
 

@@ -27,14 +27,10 @@ export const Footer: React.FC = () => {
                 {/* Links & Rechtliches */}
                 <div className="footer-section">
                     <img src={footerLogo} alt="Footer Logo" className="footer-logo"/>
-                    <h3>Links</h3>
-                    <a id={"footer-links"} href="https://example.com" target="_blank" rel="noopener noreferrer">Zertifikat 1</a><br/>
-                    <a id={"footer-links"} href="https://example.com" target="_blank" rel="noopener noreferrer">Zertifikat 2t</a>
 
                     <h3>Rechtliches</h3>
                     <Link id={"footer-links"} to="/impressum">Impressum</Link><br/>
                     <Link id={"footer-links"} to="/datenschutz">Datenschutz</Link><br/>
-                    <Link id={"footer-links"} to="/agb">AGB</Link>
                 </div>
             </div>
 
