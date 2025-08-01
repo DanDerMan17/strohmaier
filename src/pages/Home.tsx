@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import img1 from '../assets/building/entry.jpg';
-import img2 from '../assets/product_images/0,5 kg brot.jpg';
-import img3 from '../assets/product_images/bauernbrot.jpg';
-import img4 from '../assets/product_images/heidenbrot.jpg';
+import img1 from '../assets/building/outside.jpg';
+import img2 from '../assets/building/entry.jpg';
+import img3 from '../assets/product_images/0,5 kg brot.jpg';
+import img4 from '../assets/product_images/bauernbrot.jpg';
+import img5 from '../assets/product_images/heidenbrot.jpg';
 
-const images = [img1, img2, img3, img4];
+const images = [img1, img2, img3, img4, img5];
 const INTERVAL = 4000; // ms
 
 export const Home = () => {
@@ -92,7 +93,7 @@ export const Home = () => {
 
             <div className={"usp"}>
                 <br/><br/>
-                Bei uns gibt’s täglich frisch Gebackenes – mit Liebe und Handwerk.
+                Bei uns gibt’s täglich frisch Gebackenes – mit Liebe und Handwerk. ❤️ 🥐🍞🥖
             </div>
         </div>
     );
