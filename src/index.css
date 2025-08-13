@@ -341,156 +341,485 @@ body {
 /* 📱 Responsive: Mobile   */
 /* ----------------------- */
 
-@media (max-width: var(--breakpoint-mobile)) {
-
+@media (max-width: 768px) {
+    /* Base mobile fixes */
     html, body {
-        max-width: 90%;
-        overflow-x: hidden;
-    }
-
-    h1 {
-        font-size: clamp(1.5rem, 4vw, 2.2rem);
-        text-align: center;
-        line-height: 1.4;
-        word-break: break-word;
-    }
-
-    .background {
         width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
         box-sizing: border-box;
     }
 
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Typography improvements */
+    h1 {
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
+        text-align: center;
+        line-height: 1.3;
+        word-break: break-word;
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+
+    h2 {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+        margin: 0.8rem 0;
+    }
+
+    h3 {
+        font-size: clamp(1rem, 3.5vw, 1.4rem);
+        margin: 0.6rem 0;
+    }
+
+    /* Background container */
+    .background {
+        width: 100%;
+        padding: 2rem 1rem;
+        margin: 0;
+        box-sizing: border-box;
+        min-height: auto;
+    }
+
+    /* Home slider fixes */
     .home-slider {
-        height: 240px !important;
+        height: 250px !important;
+        width: 100%;
         object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* Top bar mobile layout */
+    #top-bar-wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #top-bar {
+        padding: 8px 15px;
+        width: 100%;
     }
 
     #top-bar-inner {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 8px;
         text-align: center;
+        align-items: center;
     }
 
     .topbar-content {
-        font-size: 14px;
+        font-size: 13px;
+        word-break: break-all;
+        text-align: center;
     }
 
+    #top-bar-social {
+        justify-content: center;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+        margin: 0 8px;
+    }
+
+    /* Navbar mobile improvements */
     .navbar {
         flex-direction: column;
-        padding: 1rem;
-        align-items: flex-start;
+        padding: 1rem 15px;
+        align-items: center;
         width: 100%;
-        overflow-x: hidden;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 10;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo-container {
+        margin-bottom: 15px;
+        padding-left: 0;
+        text-align: center;
     }
 
     .navbar-links {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
-        gap: 0.75rem;
-        font-size: 18px;
+        gap: 12px;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
     }
 
     .navbar-links li {
-        width: 100%;
+        width: auto;
         margin: 0;
-        text-align: left;
+        text-align: center;
     }
 
+    .navbar-links li a {
+        padding: 8px 16px;
+        display: block;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-links li a:hover,
+    .navbar-links li a.active {
+        background-color: #febc26;
+        color: white;
+    }
+
+    .navbar-links li a::after {
+        display: none; /* Hide underline effect on mobile */
+    }
+
+    /* Logo positioning fixes */
     #baecker_logo {
         position: static;
         transform: none;
-        height: 50px;
-        margin-bottom: 1rem;
+        height: 45px;
+        margin-bottom: 10px;
     }
 
-    .footer {
-        background-image:
-                linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 100%),
-                url("assets/res/background_wheat_pattern.png");
-        background-size: 750px 750px;
-        background-repeat: repeat;
-        background-position: center;
-        background-color: white;
-        padding: 3rem 2rem;
-        min-height: 300px;
-        color: black;
-        font-weight: lighter;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-        box-sizing: border-box;
+    .logo_vulcan {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 0;
     }
 
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
+    .logo_vulcan img {
+        height: 80px;
+        max-width: 90%;
     }
 
-    .footer-section {
-        width: 100%;
-        min-width: unset;
-    }
-
-    .footer-logo {
-        width: 120px;
-    }
-
-    .footer-social {
-        margin-top: 1.5rem;
-    }
-
-    .footer-social a {
-        font-size: 20px;
+    /* Product grid mobile layout - override the inline styles */
+    .background > div[style*="grid"] {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+        padding: 0 10px 40px !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .product-card {
-        max-width: 90%;
-        padding: 12px;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 12px !important;
+        margin: 0 !important;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+        min-width: 0; /* Prevents overflow */
     }
 
-    .product-card img {
-        height: 140px;
+    .product-image {
+        height: 150px !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        border-radius: 6px;
     }
 
     .product-overlay {
-        font-size: 0.9rem;
+        font-size: 0.8rem !important;
     }
 
+    .product-card h3 {
+        font-size: 0.9rem !important;
+        margin: 8px 0 4px 0 !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
+    }
+
+    .product-card p {
+        font-size: 0.9rem !important;
+        margin: 4px 0 !important;
+        text-align: center !important;
+        font-weight: bold !important;
+        color: #6b4d27 !important;
+    }
+
+    /* Footer mobile improvements - better contrast and readability */
+    .footer {
+        background: linear-gradient(135deg, #2c1810 0%, #4a2c1a 50%, #6b4423 100%) !important;
+        background-size: cover !important;
+        padding: 2rem 1rem !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        color: #ffffff !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+        position: relative;
+    }
+
+    .footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("assets/res/background_wheat_pattern.png");
+        background-size: 200px 200px;
+        background-repeat: repeat;
+        opacity: 0.1;
+        z-index: 0;
+    }
+
+    .footer-content {
+        position: relative;
+        z-index: 1;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem !important;
+        text-align: center !important;
+    }
+
+    .footer-section {
+        position: relative;
+        z-index: 1;
+        width: 100% !important;
+        max-width: 300px !important;
+        min-width: unset !important;
+    }
+
+    .footer-section h3 {
+        color: #febc26 !important;
+        font-size: 1.3rem !important;
+        margin-bottom: 1rem !important;
+        font-weight: bold !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .footer-section p {
+        margin: 0.5rem 0 !important;
+        line-height: 1.6 !important;
+        color: #ffffff !important;
+        font-size: 1rem !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .footer-logo {
+        width: 120px !important;
+        height: auto !important;
+        filter: brightness(1.2) contrast(1.1);
+    }
+
+    .footer-social {
+        position: relative;
+        z-index: 1;
+        margin-top: 1.5rem !important;
+        text-align: center !important;
+    }
+
+    .footer-social a {
+        margin: 0 15px !important;
+        display: inline-block !important;
+    }
+
+    .footer-social .social-icon {
+        width: 32px !important;
+        height: 32px !important;
+        transition: transform 0.3s ease !important;
+        filter: brightness(1.1);
+    }
+
+    .footer-social .social-icon:hover {
+        transform: scale(1.2) !important;
+    }
+
+    #footer-links {
+        color: #ffffff !important;
+        font-weight: normal !important;
+        text-decoration: underline !important;
+        margin: 8px 0 !important;
+        display: inline-block !important;
+        font-size: 1rem !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    #footer-links:hover {
+        color: #febc26 !important;
+        font-weight: bold !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    /* Content sections */
     .usp {
         font-size: 16px;
-        padding: 0 0.5rem;
-    }
-
-    .legal-page {
-        padding: 1.5rem 1rem;
-        font-size: 16px;
-        line-height: 1.5;
+        padding: 1rem;
+        text-align: center;
+        line-height: 1.6;
+        max-width: 100%;
+        margin: 1rem 0;
     }
 
     .centerDiv {
         padding: 1rem;
-        font-size: 16px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .centerDiv img {
+        max-width: 90%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    /* Legal pages */
+    .legal-page {
+        padding: 1.5rem 1rem;
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 100%;
+    }
+
+    /* Modal improvements */
+    .modal {
+        padding: 20px;
     }
 
     .modal-content {
-        padding: 0 1rem;
+        max-width: 95vw;
+        padding: 0;
+        margin: 0 auto;
     }
 
     .modal-image {
-        max-width: 100%;
+        width: 100%;
         height: auto;
+        max-height: 70vh;
+        object-fit: contain;
+        border-radius: 8px;
     }
 
     .modal-close-button {
-        top: 8px;
-        right: 8px;
-        width: 28px;
-        height: 28px;
-        font-size: 14px;
+        top: -10px;
+        right: -10px;
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Slider arrows mobile */
+    .slider-container button[style*="position: absolute"] {
+        padding: 8px 12px;
+        font-size: 18px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    /* Map container */
+    iframe {
+        width: 100%;
+        height: 350px;
+        border-radius: 8px;
+        margin: 1rem 0;
+    }
+
+    /* Opening hours table styling */
+    .opening-hours-container {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .opening-hours-container h2 {
+        margin: 1.5rem 0 0.5rem 0;
+        color: #6b4d27;
+    }
+
+    .opening-hours-container h3 {
+        margin: 0.5rem 0 1rem 0;
+        font-weight: normal;
+        color: #333;
+    }
+
+    /* About page improvements */
+    .about-container {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .about-container img {
+        max-width: 90%;
+        height: auto;
+        max-height: 350px;
+        border-radius: 8px;
+        margin-bottom: 1rem;
     }
 }
 
+/* Additional breakpoint for very small screens */
+@media (max-width: 480px) {
+    .home-slider {
+        height: 200px !important;
+    }
 
+    .background {
+        padding: 1.5rem 0.5rem;
+    }
+
+    h1 {
+        font-size: clamp(1.3rem, 5vw, 2rem);
+        padding: 0 0.5rem;
+    }
+
+    .usp {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+
+    .navbar-links {
+        font-size: 15px;
+        gap: 10px;
+    }
+
+    .footer {
+        padding: 1.5rem 0.5rem !important;
+    }
+
+    .modal-image {
+        max-height: 60vh;
+    }
+
+    /* Even smaller product grid for very small screens */
+    .background > div[style*="grid"] {
+        gap: 10px !important;
+        padding: 0 5px 30px !important;
+    }
+
+    .product-card {
+        padding: 8px !important;
+    }
+
+    .product-image {
+        height: 120px !important;
+    }
+
+    .product-card h3 {
+        font-size: 0.8rem !important;
+        margin: 6px 0 3px 0 !important;
+    }
+
+    .product-card p {
+        font-size: 0.8rem !important;
+    }
+}
 /* ----------------------- */
 /* 🧻 Responsive: Tablet   */
 /* ----------------------- */
