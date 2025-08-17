@@ -28,7 +28,6 @@ export const Footer: React.FC = () => {
                 <div className="footer-section">
                     <img src={footerLogo} alt="Footer Logo" className="footer-logo"/>
 
-                    <h3>Rechtliches</h3>
                     <Link id={"footer-links"} to="/impressum">Impressum</Link><br/>
                     <Link id={"footer-links"} to="/datenschutz">Datenschutz</Link><br/>
                 </div>

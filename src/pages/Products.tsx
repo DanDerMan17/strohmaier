@@ -5,30 +5,27 @@ import {products_mock} from "../data/products_mock.ts";
 export const Products = () => {
     return (
         <>
-            <div className={"background"}>
+            <div className={"background"} style={{ padding: "2rem 1rem" }}>
                 <div className="logo_vulcan">
                     <img src={logo_vulkanland} height={125}/>
                 </div>
-                <h1>Unsere Produkte</h1>
+                <h1 style={{ marginBottom: "3rem" }}>Unsere Produkte</h1>
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-                        gap: "24px",
-                        padding: "0 40px 60px",
-                        maxWidth: "1200px",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                        gap: "32px",
+                        padding: "0 20px 80px",
+                        maxWidth: "1600px", // Increased from 1200px
                         margin: "0 auto",
+                        width: "100%",
                     }}
                 >
                     {products_mock.map((product, index) => (
                         <ProductCard key={index} product={product}/>
                     ))}
                 </div>
-
-
             </div>
-
-
         </>
     );
 };
