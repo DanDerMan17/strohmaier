@@ -16,8 +16,11 @@ export const OpeningHours = () => {
 
                     <br></br>
 
-                    <h2>Sonntag & Feiertage</h2>
+                    <h2>Sonntag</h2>
                     <h3>07:00 Uhr - 11:00 Uhr</h3>
+
+                    <h2>Feiertage</h2>
+                    <h3>Geschlossen</h3>
 
                 </div>
 

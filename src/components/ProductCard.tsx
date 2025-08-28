@@ -29,9 +29,6 @@ export const ProductCard: React.FC<IPropsProductCard> = ({ product }) => {
                 <h3 style={{ margin: "12px 0 8px 0", textAlign: "center" }}>
                     {product.name}
                 </h3>
-                <p style={{ fontWeight: "bold", color: "#6b4d27" }}>
-                    € {product.price.toFixed(2)}
-                </p>
             </div>
 
             {isModalOpen &&
