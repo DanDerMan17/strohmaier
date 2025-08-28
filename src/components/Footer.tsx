@@ -13,15 +13,15 @@ export const Footer: React.FC = () => {
                     <p>Bäckerei Strohmaier</p>
                     <p>Grazerstraße 3</p>
                     <p>8083 St. Stefan im Rosental</p>
-                    <p>Email: baeckerei@strohmaierkg.at</p>
-                    <p>Telefon: 03116 8283</p>
+                    <p>Email: <a href="mailto:baeckerei@strohmaierkg.at">baeckerei@strohmaierkg.at</a></p>
+                    <p>Telefon: <a href="tel:+4331168283">03116 8283</a></p>
                 </div>
 
                 {/* Filialen */}
                 <div className="footer-section">
                     <h3>Filiale</h3>
                     <p>Filiale St. Stefan im Rosental<br/>8083 St. Stefan im Rosental, Grazerstraße 3</p>
-                    <p>Tel.: 03116 8283</p>
+                    <p>Tel.: <a href="tel:+4331168283">03116 8283</a></p>
                 </div>
 
                 {/* Links & Rechtliches */}
@@ -45,4 +45,3 @@ export const Footer: React.FC = () => {
         </footer>
     );
 };
-
