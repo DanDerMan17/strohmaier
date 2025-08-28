@@ -33,6 +33,7 @@ export const Footer: React.FC = () => {
                 </div>
             </div>
 
+
             {/* Social Media Icons */}
             <div className="footer-social">
                 <a href="https://www.facebook.com/kurt.strohmaier.144" target="_blank" rel="noopener noreferrer">
