@@ -42,6 +42,7 @@ export const ProductCard: React.FC<IPropsProductCard> = ({ product }) => {
                             onClick={(e) => e.stopPropagation()}
                         >
                             <img
+                                loading="lazy"
                                 src={product.image}
                                 alt={product.name}
                                 className="modal-image"

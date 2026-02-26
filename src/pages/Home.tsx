@@ -45,7 +45,9 @@ export const Home = () => {
                     margin: '20px auto',
                 }}
             >
-                <img className={"home-slider"}
+                <img
+                    loading="lazy"
+                    className={"home-slider"}
                     src={images[currentIndex]}
                     alt={`Slide ${currentIndex}`}
                     style={{

@@ -26,10 +26,10 @@ function App() {
 
                         <div id="top-bar-social">
                             <a href="https://www.facebook.com/kurt.strohmaier.144" target="_blank" rel="noopener noreferrer">
-                                <img src={facebook_logo} className="social-icon" />
+                                <img loading="lazy" src={facebook_logo} className="social-icon" />
                             </a>
                             <a href="https://www.instagram.com/kurt.strohmaier.144/" target="_blank" rel="noopener noreferrer">
-                                <img src={instagram_logo} className="social-icon" />
+                                <img loading="lazy" src={instagram_logo} className="social-icon" />
                             </a>
                         </div>
 

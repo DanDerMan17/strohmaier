@@ -15,8 +15,6 @@ export const Impressum: React.FC = () => {
 
                 <p><strong>Unternehmensform:</strong> Kommanditgesellschaft (KG)</p>
                 <p><strong>Vertretungsberechtigt:</strong> Kurt Strohmaier</p>
-                <p><strong>Firmenbuchnummer:</strong> BITTE EINGEBEN <br/>
-                    <strong>UID-Nummer:</strong> BITTE EINGEBEN </p>
 
                 <p><strong>Aufsichtsbehörde:</strong> Bezirkshauptmannschaft Südoststeiermark</p>
                 <p><strong>Berufsrechtliche Vorschriften:</strong> Gewerbeordnung (www.ris.bka.gv.at)</p>

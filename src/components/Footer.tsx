@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
 
                 {/* Links & Rechtliches */}
                 <div className="footer-section">
-                    <img src={footerLogo} alt="Footer Logo" className="footer-logo"/>
+                    <img loading="lazy" src={footerLogo} alt="Footer Logo" className="footer-logo"/>
 
                     <Link id={"footer-links"} to="/impressum">Impressum</Link><br/>
                     <Link id={"footer-links"} to="/datenschutz">Datenschutz</Link><br/>
@@ -36,10 +36,10 @@ export const Footer: React.FC = () => {
             {/* Social Media Icons */}
             <div className="footer-social">
                 <a href="https://www.facebook.com/kurt.strohmaier.144" target="_blank" rel="noopener noreferrer">
-                    <img src={color_facebook_logo} className="social-icon"/>
+                    <img loading="lazy" src={color_facebook_logo} className="social-icon"/>
                 </a>
                 <a href="https://www.instagram.com/kurt.strohmaier.144/" target="_blank" rel="noopener noreferrer">
-                    <img src={color_instagram_logo} className="social-icon"/>
+                    <img loading="lazy" src={color_instagram_logo} className="social-icon"/>
                 </a>
             </div>
         </footer>

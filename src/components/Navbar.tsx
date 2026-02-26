@@ -11,7 +11,7 @@ export const Navbar = () => {
         <nav className="navbar">
             <div className="logo-container">
                 <Link to="/">
-                    <img src={logo_top} height={75} alt="Logo" />
+                    <img loading="lazy" src={logo_top} height={75} alt="Logo" />
                 </Link>
             </div>
 

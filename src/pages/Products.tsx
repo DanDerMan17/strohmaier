@@ -7,7 +7,7 @@ export const Products = () => {
         <>
             <div className={"background"} style={{ padding: "2rem 1rem" }}>
                 <div className="logo_vulcan">
-                    <img src={logo_vulkanland} height={125}/>
+                    <img loading="lazy" src={logo_vulkanland} height={125}/>
                 </div>
                 <h1 style={{ marginBottom: "3rem" }}>Unsere Produkte</h1>
                 <div

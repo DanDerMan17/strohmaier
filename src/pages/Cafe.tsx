@@ -43,7 +43,7 @@ export const Cafe = () => {
                     margin: '20px auto',
                 }}
             >
-                <img
+                <img loading="lazy"
                     src={images[currentIndex]}
                     alt={`Slide ${currentIndex}`}
                     style={{
