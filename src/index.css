@@ -729,6 +729,7 @@ body {
         bottom: 0;
         background-image: url("assets/res/background_wheat_pattern.jpg");
         background-size: 200px 200px;
+
         background-repeat: repeat;
         opacity: 0.1;
         z-index: 0;
