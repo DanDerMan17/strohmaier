@@ -7,8 +7,7 @@ export const About = () => {
                 <h1>Über uns</h1>
 
                 <div className={"centerDiv"}>
-                    <img loading="lazy" src={owner} height={"400px"}></img>
-                    <p>Kurt Strohmaier</p>
+                    <img src={owner} width={290} height={400} alt="Kurt Strohmaier" />                    <p>Kurt Strohmaier</p>
                 </div>
 
             </div>

@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import img1 from '../assets/building/outside.jpg';
 import img2 from '../assets/building/entry.jpg';
-import img3 from '../assets/product_images/0,5 kg brot.jpg';
-import img4 from '../assets/product_images/bauernbrot.jpg';
-import img5 from '../assets/product_images/heidenbrot.jpg';
+import img3 from '../assets/product_images_webp/0,5 kg brot.webp';
+import img4 from '../assets/product_images_webp/bauernbrot.webp';
+import img5 from '../assets/product_images_webp/heidenbrot.webp';
 
 const images = [img1, img2, img3, img4, img5];
 const INTERVAL = 4000; // ms
@@ -46,10 +46,11 @@ export const Home = () => {
                 }}
             >
                 <img
-                    loading="lazy"
-                    className={"home-slider"}
                     src={images[currentIndex]}
                     alt={`Slide ${currentIndex}`}
+                    loading={currentIndex === 0 ? "eager" : "lazy"}
+                    fetchPriority={currentIndex === 0 ? "high" : "auto"}
+                    className={"home-slider"}
                     style={{
                         width: '100%',
                         height: '600px',

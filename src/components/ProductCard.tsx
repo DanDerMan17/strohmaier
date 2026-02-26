@@ -20,6 +20,8 @@ export const ProductCard: React.FC<IPropsProductCard> = ({ product }) => {
                     <img
                         src={product.image}
                         alt={product.name}
+                        width={320}
+                        height={220}
                         loading="lazy"
                         className="product-image"
                     />
