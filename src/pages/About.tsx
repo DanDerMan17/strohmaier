@@ -1,4 +1,4 @@
-import owner from "../assets/res/kurt.jpg";
+import owner from "../assets/res/kurt.webp";
 
 export const About = () => {
     return (

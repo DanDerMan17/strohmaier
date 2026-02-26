@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import img1 from '../assets/building/outside.jpg';
-import img2 from '../assets/building/entry.jpg';
+import img1 from '../assets/building/outside.webp';
+import img2 from '../assets/building/entry.webp';
 import img3 from '../assets/product_images_webp/0,5 kg brot.webp';
 import img4 from '../assets/product_images_webp/bauernbrot.webp';
 import img5 from '../assets/product_images_webp/heidenbrot.webp';

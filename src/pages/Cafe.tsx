@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import img1 from '../assets/building/cafe_shop.jpg';
-import img2 from '../assets/building/cafeteria.jpg';
-import img3 from '../assets/building/snacks.jpg';
+import img1 from '../assets/building/cafe_shop.webp';
+import img2 from '../assets/building/cafeteria.webp';
+import img3 from '../assets/building/snacks.webp';
 
 const images = [img1, img2, img3];
 const INTERVAL = 4000; // ms
