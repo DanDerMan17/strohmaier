@@ -4,7 +4,12 @@ import img2 from '../assets/building/cafeteria.webp';
 import img3 from '../assets/building/snacks.webp';
 
 const images = [img1, img2, img3];
-const INTERVAL = 4000; // ms
+const altTexts = [
+    "Café Strohmaier von außen",
+    "Cafeteria der Bäckerei Strohmaier",
+    "Snacks und Gebäck im Café Strohmaier",
+];
+const INTERVAL = 4000;
 
 export const Cafe = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,9 +23,9 @@ export const Cafe = () => {
     };
 
     useEffect(() => {
-        resetTimer(); // Start autoplay on mount
+        resetTimer();
         return () => {
-            if (timerRef.current) clearInterval(timerRef.current); // Cleanup on unmount
+            if (timerRef.current) clearInterval(timerRef.current);
         };
     }, []);
 
@@ -43,9 +48,12 @@ export const Cafe = () => {
                     margin: '20px auto',
                 }}
             >
-                <img loading="lazy"
+                <img
                     src={images[currentIndex]}
-                    alt={`Slide ${currentIndex}`}
+                    alt={altTexts[currentIndex]}
+                    loading="lazy"
+                    width={800}
+                    height={600}
                     style={{
                         width: '100%',
                         height: '600px',
@@ -55,15 +63,14 @@ export const Cafe = () => {
                     }}
                 />
 
-                <button onClick={goToPrev} style={arrowStyle('left')}>
+                <button onClick={goToPrev} style={arrowStyle('left')} aria-label="Vorheriges Bild">
                     ‹
                 </button>
 
-                <button onClick={goToNext} style={arrowStyle('right')}>
+                <button onClick={goToNext} style={arrowStyle('right')} aria-label="Nächstes Bild">
                     ›
                 </button>
 
-                {/* Progress bars */}
                 <div
                     style={{
                         display: 'flex',
@@ -76,6 +83,8 @@ export const Cafe = () => {
                         <div
                             key={i}
                             onClick={() => goToSlide(i)}
+                            role="button"
+                            aria-label={`Bild ${i + 1}`}
                             style={{
                                 flex: 1,
                                 height: '6px',
@@ -99,7 +108,6 @@ export const Cafe = () => {
     );
 };
 
-// Reusable inline arrow styles
 const arrowStyle = (side: 'left' | 'right') => ({
     position: 'absolute',
     top: '50%',

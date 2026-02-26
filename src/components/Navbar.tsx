@@ -10,8 +10,8 @@ export const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="logo-container">
-                <Link to="/">
-                    <img loading="lazy" src={logo_top} height={75} alt="Logo" />
+                <Link to="/" aria-label="Bäckerei Strohmaier - Startseite">
+                    <img src={logo_top} height={75} width={90} alt="Bäckerei Strohmaier Logo" />
                 </Link>
             </div>
 

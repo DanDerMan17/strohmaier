@@ -7,7 +7,7 @@ export const Products = () => {
         <>
             <div className={"background"} style={{ padding: "2rem 1rem" }}>
                 <div className="logo_vulcan">
-                    <img loading="lazy" src={logo_vulkanland} height={125}/>
+                    <img loading="lazy" src={logo_vulkanland} height={125} width={125} alt="Vulkanland Qualitätssiegel" />
                 </div>
                 <h1 style={{ marginBottom: "3rem" }}>Unsere Produkte</h1>
                 <div
@@ -16,7 +16,7 @@ export const Products = () => {
                         gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
                         gap: "32px",
                         padding: "0 20px 80px",
-                        maxWidth: "1600px", // Increased from 1200px
+                        maxWidth: "1600px",
                         margin: "0 auto",
                         width: "100%",
                     }}

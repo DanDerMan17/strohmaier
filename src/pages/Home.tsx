@@ -6,7 +6,14 @@ import img4 from '../assets/product_images_webp/bauernbrot.webp';
 import img5 from '../assets/product_images_webp/heidenbrot.webp';
 
 const images = [img1, img2, img3, img4, img5];
-const INTERVAL = 4000; // ms
+const altTexts = [
+    "Bäckerei Strohmaier von außen",
+    "Eingang der Bäckerei Strohmaier",
+    "Frisches Brot von der Bäckerei Strohmaier",
+    "Bauernbrot von der Bäckerei Strohmaier",
+    "Heidenbrot von der Bäckerei Strohmaier",
+];
+const INTERVAL = 4000;
 
 export const Home = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,9 +27,9 @@ export const Home = () => {
     };
 
     useEffect(() => {
-        resetTimer(); // Start autoplay on mount
+        resetTimer();
         return () => {
-            if (timerRef.current) clearInterval(timerRef.current); // Cleanup on unmount
+            if (timerRef.current) clearInterval(timerRef.current);
         };
     }, []);
 
@@ -47,9 +54,11 @@ export const Home = () => {
             >
                 <img
                     src={images[currentIndex]}
-                    alt={`Slide ${currentIndex}`}
+                    alt={altTexts[currentIndex]}
                     loading={currentIndex === 0 ? "eager" : "lazy"}
                     fetchPriority={currentIndex === 0 ? "high" : "auto"}
+                    width={800}
+                    height={600}
                     className={"home-slider"}
                     style={{
                         width: '100%',
@@ -60,15 +69,14 @@ export const Home = () => {
                     }}
                 />
 
-                <button onClick={goToPrev} style={arrowStyle('left')}>
+                <button onClick={goToPrev} style={arrowStyle('left')} aria-label="Vorheriges Bild">
                     ‹
                 </button>
 
-                <button onClick={goToNext} style={arrowStyle('right')}>
+                <button onClick={goToNext} style={arrowStyle('right')} aria-label="Nächstes Bild">
                     ›
                 </button>
 
-                {/* Progress bars */}
                 <div
                     style={{
                         display: 'flex',
@@ -81,6 +89,8 @@ export const Home = () => {
                         <div
                             key={i}
                             onClick={() => goToSlide(i)}
+                            role="button"
+                            aria-label={`Bild ${i + 1}`}
                             style={{
                                 flex: 1,
                                 height: '6px',
@@ -96,13 +106,12 @@ export const Home = () => {
 
             <div className={"usp"}>
                 <br/><br/>
-                Bei uns gibt’s täglich frisch Gebackenes – mit Liebe und Handwerk. ❤️ 🥐🍞🥖
+                Bei uns gibt's täglich frisch Gebackenes – mit Liebe und Handwerk. ❤️ 🥐🍞🥖
             </div>
         </div>
     );
 };
 
-// Reusable inline arrow styles
 const arrowStyle = (side: 'left' | 'right') => ({
     position: 'absolute',
     top: '50%',

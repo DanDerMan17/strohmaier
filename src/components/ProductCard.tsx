@@ -17,14 +17,7 @@ export const ProductCard: React.FC<IPropsProductCard> = ({ product }) => {
                     className="product-image-container"
                     onClick={() => setIsModalOpen(true)}
                 >
-                    <img
-                        src={product.image}
-                        alt={product.name}
-                        width={320}
-                        height={220}
-                        loading="lazy"
-                        className="product-image"
-                    />
+                    <img src={product.image} alt={product.name} width={320} height={220} loading="lazy" className="product-image" />
                     <div className="product-overlay">Zeige Bild an</div>
                 </div>
 
