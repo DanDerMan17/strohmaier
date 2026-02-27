@@ -270,6 +270,18 @@ body {
     transform: scale(1.2);
 }
 
+/* Footer contact links (tel & mailto) */
+.footer-section a {
+    color: #febc26;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: ghostwhite;
+    text-decoration: underline;
+}
+
 #footer-links {
     color: black;
     font-weight: lighter;
@@ -750,6 +762,15 @@ body {
         width: 100% !important;
         max-width: 300px !important;
         min-width: unset !important;
+    }
+
+    .footer-section a {
+        color: #febc26 !important;
+        text-decoration: none !important;
+    }
+
+    .footer-section a:hover {
+        color: ghostwhite !important;
     }
 
     .footer-section h3 {
